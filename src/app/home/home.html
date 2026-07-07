@@ -1,9 +1,11 @@
-<div class="viewer-page">
+<div class="home">
+
   <!-- Barra superior -->
   <header class="topbar">
     <div class="logo">
       <h2>IEEE 2026 SciVis Contest</h2>
     </div>
+
     <nav>
       <a routerLink="/home">Inicio</a>
       <a routerLink="/viewer" [queryParams]="{ port: 8080 }">Task 0 - 1</a>
@@ -12,16 +14,20 @@
     </nav>
   </header>
 
-  <!-- Contenido -->
-  <section class="viewer-content">
-    <div class="viewer-window">
-      <iframe
-        [src]="safeUrl"
-        frameborder="0"
-        allow="fullscreen"
-        allowfullscreen
-        class="viewer-iframe">
-      </iframe>
+  <!-- Contenido principal -->
+  <section class="hero">
+
+    <div class="title-left">
+      <h1>VISUALIZACIÓN DE DATOS</h1>
+      <h2>ENTREGA DEL PROYECTO FINAL 2026</h2>
     </div>
+
+    <div class="buttons">
+      <button (click)="irAVisualizacion(8080)">TASK 0 - 1</button>
+      <button (click)="irAVisualizacion(8081)">TASK 0 - 2</button>
+      <button (click)="irAVisualizacion(8082)">TASK 1</button>
+    </div>
+
   </section>
+
 </div>

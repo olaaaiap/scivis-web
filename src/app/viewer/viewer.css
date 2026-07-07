@@ -1,11 +1,101 @@
-.viewer-container {
-  width: 100%;
-  height: 100%;
-  min-height: 600px;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.viewer-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.viewer-page{
+    width:100%;
+    height:100vh;
+
+    background:url("https://sciviscontest2026.github.io/assets/img/bg.jpg") center center/cover no-repeat;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* Oscurecer fondo */
+.viewer-page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.6);
+}
+
+/* ---------- Barra superior ---------- */
+
+.topbar{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    padding:25px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo h2{
+    color:white;
+    font-size:26px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    text-transform:uppercase;
+    opacity:.8;
+    transition:.3s;
+}
+
+nav a:hover{
+    opacity:1;
+}
+
+/* ---------- Contenido ---------- */
+
+.viewer-content{
+    position:relative;
+    z-index:2;
+
+    height:calc(100vh - 90px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+/* Ventana */
+
+.viewer-window{
+
+    width:80%;
+    height:90%;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+/* Iframe */
+
+.viewer-iframe{
+    width:100%;
+    height:100%;
+    border:none;
 }
