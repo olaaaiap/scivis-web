@@ -19,9 +19,7 @@ export class Viewer implements OnInit {
     this.route.queryParams.subscribe(params => {
       const port = params['port'];
       if (port) {
-        // const url = `http://novaviz.org/:${port}`;
-        // const url = `http://novaviz.org:${port}/index.html`;
-        const url = `http://56.228.47.203:${port}/index.html`;
+        const url = `http://localhost:${port}`;
         this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
       }
     });
